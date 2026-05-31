@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.8.1 - 2026-05-31
+- Replaced em dashes with plain hyphens in the in-page panel toast messages ("Selection lost", "can't replace text here", "engine not loaded") so they render consistently across fonts and platforms.
+
 ## 1.8.0 - 2026-05-29
 - Right-click panel is now **draggable** — grab the header to reposition it anywhere on the page (stays clamped on-screen). The close button and body controls keep working normally.
 - Right-click panel cleanup actions (Format Sentences, Strip Unicode, Remove Formatting) now show **one at a time** with ‹ › arrows to cycle and the last-used option shown first, matching the popup's cleanup carousel.
