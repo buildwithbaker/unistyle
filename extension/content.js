@@ -42,7 +42,7 @@
      time. Independent of LAST_USED_KEY (which drives the hotkey reapply).
      Falls back to the first option when empty/unknown. */
   const CLEANUP_CHOICE_KEY = 'unistyle-cleanup-choice';
-  /* Mirror of popup.js defaults — kept identical so first-run behaviour
+  /* Mirror of popup.js defaults - kept identical so first-run behaviour
      matches whether the popup or the panel runs first. */
   const DEFAULT_FAVS = ['bold', 'italic', 'bolditalic', 'boldsans', 'italicsans', 'boldisans', 'under', 'strike', 'mono', 'script', 'fraktur', 'dblstruck', 'fullwidth', 'smallcaps', 'bubble', 'upsidedown', 'reverse', 'altcase', 'zalgo', 'subscript', 'superscript', 'flags'];
 
@@ -128,7 +128,7 @@
       if (!readOnly && start != null && end != null && start !== end) {
         return { kind: 'input', el: active, start, end };
       }
-      return { kind: 'readonly', reason: readOnly ? 'This field is read-only.' : 'Selection lost — try again.' };
+      return { kind: 'readonly', reason: readOnly ? 'This field is read-only.' : 'Selection lost - try again.' };
     }
 
     // Case 2: contenteditable
@@ -144,8 +144,8 @@
         }
         node = (node.parentNode || null);
       }
-      // Selection exists but isn't editable — read-only text node / article body
-      return { kind: 'readonly', reason: "Can't replace text here — this page isn't editable. Use Copy instead." };
+      // Selection exists but isn't editable - read-only text node / article body
+      return { kind: 'readonly', reason: "Can't replace text here - this page isn't editable. Use Copy instead." };
     }
 
     return { kind: 'readonly', reason: "Can't replace text here. Use Copy instead." };
@@ -224,7 +224,7 @@
     panelText = text;
     if (panelHost) dismiss();   // reset if one is already open
 
-    // Capture replacement target BEFORE we build the panel — once the
+    // Capture replacement target BEFORE we build the panel - once the
     // panel is in the DOM, clicking it will move focus into the shadow
     // root and we'll lose the activeElement/Range we need.
     target = captureTarget();
@@ -300,7 +300,7 @@
      row the user just copied, inside the shadow root. Shares the 'ahaShown'
      flag with the popup via chrome.storage.session (background.js grants
      untrusted-context access via setAccessLevel; without it storage.session
-     is trusted-only and the get below throws — caught so the nudge is simply
+     is trusted-only and the get below throws - caught so the nudge is simply
      skipped). Built with DOM APIs, not innerHTML, so it survives host pages
      that enforce Trusted Types (same discipline as the rest of this file).
      Only wired to Copy, not Replace: Replace dismisses the panel ~350ms
@@ -400,7 +400,7 @@
     if (typeof STYLES === 'undefined') {
       const err = document.createElement('div');
       err.className = 'tf-error';
-      err.textContent = 'Engine not loaded — try reloading the extension.';
+      err.textContent = 'Engine not loaded - try reloading the extension.';
       list.appendChild(err);
       return list;
     }
@@ -467,7 +467,7 @@
           setLastUsedStyle(style.key); // F15: remember this style for the hotkey
           replaceBtn.textContent = 'Done';
           replaceBtn.classList.add('done');
-          // Brief flash, then dismiss the panel — user got their result
+          // Brief flash, then dismiss the panel - user got their result
           setTimeout(dismiss, 350);
         } else {
           replaceBtn.textContent = 'Failed';
@@ -680,7 +680,7 @@
   /* Make the panel repositionable by dragging its header. Only the header
      is the handle, so the close button, buttons, and text inside the body
      keep working normally. Movement is clamped to keep the whole panel
-     within the viewport (8px pad) — it can never be dragged off-screen.
+     within the viewport (8px pad) - it can never be dragged off-screen.
      The host page's outside-click dismissal isn't triggered because the
      closed shadow root retargets these events to panelHost, which the
      outsideListener already ignores. */
