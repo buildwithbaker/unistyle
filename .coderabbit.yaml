@@ -1,0 +1,10 @@
+# CodeRabbit config - UniStyle
+# Docs: https://docs.coderabbit.ai/getting-started/configure-coderabbit
+reviews:
+  profile: chill              # switch to "assertive" if reviews feel too soft
+  high_level_summary: true
+  poem: false                 # skip the novelty poem in review summaries
+  path_filters:
+    - "!cws-submissions/**"   # store listing assets, not code
+chat:
+  auto_reply: true
