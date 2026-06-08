@@ -1,15 +1,19 @@
 # UniStyle
 
-[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/abaker421)
-[![Live](https://img.shields.io/badge/Live-unistyle.io-2B4A8B)](https://unistyle.io)
-[![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
-
 > Convert plain text into 22 Unicode styles for Discord, Notion, X, Slack, and anywhere Unicode renders. Free. No signup, no tracking, no server.
 
-## Try it now
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/nhckckecpjaibnldmdcjjdadmadpainh?label=Chrome%20Web%20Store&color=2B4A8B)](https://chromewebstore.google.com/detail/unistyle-unicode-text-for/nhckckecpjaibnldmdcjjdadmadpainh)
+[![Web App](https://img.shields.io/badge/Web%20App-unistyle.io-2B4A8B)](https://unistyle.io)
+[![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/abaker421)
 
-- **Web app:** [unistyle.io](https://unistyle.io) - works in any modern browser, installable as a PWA on desktop and Android
-- **Chrome Extension:** Coming soon to the Chrome Web Store
+## Quick start
+
+1. **[Install UniStyle from the Chrome Web Store](https://chromewebstore.google.com/detail/unistyle-unicode-text-for/nhckckecpjaibnldmdcjjdadmadpainh)**
+2. Pin it to your toolbar (puzzle icon → pin)
+3. Select text on any page → right-click → **Format with UniStyle** (or press `Ctrl+Shift+Y`)
+
+Prefer no install? The full tool runs in your browser at **[unistyle.io](https://unistyle.io)** - installable as a PWA on desktop and Android, works offline.
 
 ## What it does
 
@@ -44,17 +48,32 @@ Get back:
 - **Right-click context menu** (extension): "Format with UniStyle" on any selected text
 - **PWA installable** (web): works offline once installed
 
+## Who it's for
+
+Discord server owners styling channel names and announcements. Creators dressing up X bios and LinkedIn headlines. Notion and Slack users who want emphasis where the platform doesn't allow formatting - usernames, statuses, titles. Anyone who's ever wanted bold text in a field that only accepts plain text.
+
 ## How it works
 
 Plain text uses standard Unicode (U+0041 = "A"). UniStyle maps each character to its equivalent in another Unicode block - "Mathematical Alphanumeric Symbols" (U+1D400+) for bold/italic/script/fraktur, "Halfwidth and Fullwidth Forms" (U+FF21+) for fullwidth, "Combining Diacritical Marks" for zalgo, etc. The output is real Unicode that displays styled glyphs anywhere a font renders those code points.
 
 This is different from Markdown formatting (which only works inside platforms that parse it). UniStyle output works in usernames, bios, status fields, third-party clients, and anywhere plain text is accepted.
 
-## Privacy
+## FAQ
 
-UniStyle runs entirely in your browser. Text typed into the tool is converted locally on your device using JavaScript - **nothing is sent to a server, saved to a database, or logged**. No analytics capture user input. The optional PWA stores recent inputs in `localStorage` (on your device only) so the History feature can show recent text; clear at any time via the Clear button.
+**Is it really free?**
+Yes. MIT licensed, no account, no ads, no tracking. [Ko-fi](https://ko-fi.com/abaker421) exists if you want to say thanks - the tool stays free either way.
 
-Full privacy policy: [unistyle.io/privacy](https://unistyle.io/privacy)
+**Why do some styles show empty boxes (□)?**
+Font coverage varies. Some platforms and older devices don't render every Unicode block. Each style in UniStyle has a compatibility tip showing where it works (Discord, X, Notion, Slack).
+
+**Will styled text hurt accessibility?**
+It can. Screen readers often read mathematical alphanumeric characters letter-by-letter or skip them. Use styled text for short decorative strings (names, headers), not body text.
+
+**What's the difference between the extension and the web app?**
+Same engine. The extension adds the right-click menu, keyboard shortcuts, and an inline panel on any page. The web app is the full-page tool and installs as an offline PWA.
+
+**Is my text sent anywhere?**
+No. Conversion happens locally in JavaScript. Nothing is sent to a server, saved to a database, or logged. Full policy: [unistyle.io/privacy](https://unistyle.io/privacy)
 
 ## Local development
 
@@ -66,15 +85,13 @@ python3 -m http.server 8000
 # Then open http://localhost:8000 in a browser
 ```
 
-No build step. No dependencies. Edit `index.html`, `engine.js`, `sw.js` directly.
-
-The Chrome extension lives in a separate folder structure (not in this repo - the extension is packaged from a parallel working tree). The shared `engine.js` is kept byte-identical between the web and extension copies.
+No build step. No dependencies. Edit `index.html`, `engine.js`, `sw.js` directly. The Chrome extension source lives in `extension/`; the shared `engine.js` is kept byte-identical between the web and extension copies.
 
 ## Contributing
 
 Issues and pull requests welcome. For larger changes please open an issue first to discuss.
 
-> **Internals:** see [docs/internal/architecture.md](docs/internal/architecture.md) for the full architecture reference — engine internals, the STYLES model, extension architecture, and gotchas.
+> **Internals:** see [docs/internal/architecture.md](docs/internal/architecture.md) for the full architecture reference - engine internals, the STYLES model, extension architecture, and gotchas.
 
 When adding a new Unicode style:
 
@@ -85,7 +102,7 @@ When adding a new Unicode style:
 
 ## Support
 
-If UniStyle saved you time, a coffee on [Ko-fi](https://ko-fi.com/abaker421) keeps the builds coming. The tool is free and stays free either way.
+If UniStyle saved you time, a coffee on [Ko-fi](https://ko-fi.com/abaker421) keeps the builds coming - and a ⭐ on this repo helps other people find it.
 
 ## License
 
@@ -94,5 +111,3 @@ MIT - see [LICENSE](LICENSE) for details.
 ## Author
 
 Built by Adam Baker - part of [Build with Baker](https://ko-fi.com/abaker421), a small-tool maker brand for things that make the web a little less annoying.
-
-Other tools coming. Feel free to follow along.
