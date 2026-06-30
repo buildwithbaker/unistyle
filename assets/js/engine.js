@@ -397,9 +397,15 @@ function formatSentences(text) {
   s=s.replace(/ ([.?!,;:])/g,'$1');
   s=s.replace(/([.?!])([A-Za-z\x01])/g,'$1 $2');
   s=s.replace(/([,;:])([^\s\n])/g,'$1 $2');
+  // Flatten case: lowercase every word EXCEPT all-caps acronyms (2+ letters,
+  // e.g. NASA, API), which are preserved. Protected tokens are already saved as
+  // \x01N\x01 placeholders (no letters), so URLs/emails/domains pass through.
+  s=s.replace(/[A-Za-z]+/g,w=>(w.length>=2&&w===w.toUpperCase())?w:w.toLowerCase());
   s=s.replace(/^[ \t]*([a-z])/,c=>c.toUpperCase());
   s=s.replace(/([.?!][ \t]+)([a-z])/g,(_,p,c)=>p+c.toUpperCase());
   s=s.replace(/\n[ \t]*([a-z])/g,(_,c)=>'\n'+c.toUpperCase());
+  // Restore the pronoun "I" and its contractions (I'm, I'll, I've, I'd).
+  s=s.replace(/\bi\b/g,'I');
   s=s.replace(/\x01(\d+)\x01/g,(_,i)=>saved[+i]);
   return s.trim();
 }
