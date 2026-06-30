@@ -14,7 +14,11 @@ share the same Unicode formatting engine.
 
 ## Deploy
 - GitHub Pages serves the repo root to the custom domain in `CNAME`
-  (unistyle.io). No workflow builds the site - pushing to main publishes it.
+  (unistyle.io). No workflow builds the site - merging a PR into main publishes it.
+
+## Branching (main is protected)
+`main` is protected - direct pushes are rejected. Branch, commit, push, open a
+PR, then squash-merge once CI is green. Never run `git push origin main`.
 
 ## Releases (Chrome Web Store contract)
 - The extension has a real release contract. For every CWS submission:
