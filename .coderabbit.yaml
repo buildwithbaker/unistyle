@@ -1,10 +1,35 @@
-# CodeRabbit config - UniStyle
+# CodeRabbit config - UniStyle (Chrome MV3 extension)
 # Docs: https://docs.coderabbit.ai/getting-started/configure-coderabbit
+language: en-US
 reviews:
-  profile: chill              # switch to "assertive" if reviews feel too soft
+  profile: assertive          # was "chill"
   high_level_summary: true
-  poem: false                 # skip the novelty poem in review summaries
+  poem: false
+  review_status: true
+  auto_review:
+    enabled: true
+    drafts: false
   path_filters:
-    - "!cws-submissions/**"   # store listing assets, not code
+    - "!cws-submissions/**"   # Chrome Web Store listing assets, not code
+    - "!assets/**"
+    - "!docs/**"
+  path_instructions:
+    - path: "manifest.json"
+      instructions: >-
+        Review for Chrome MV3 correctness. Flag over-broad permissions or host
+        permissions wider than the extension needs, and any deprecated MV2
+        fields.
+    - path: "extension/**"
+      instructions: >-
+        Focus on content-script injection safety, message-passing correctness,
+        DOM manipulation that could break on arbitrary sites, and CSP
+        violations. Flag use of innerHTML with untrusted input.
+    - path: "sw.js"
+      instructions: >-
+        Review service-worker lifecycle correctness (event listeners registered
+        at top level, no long-lived global state assumptions).
+    - path: "**/*"
+      instructions: >-
+        Flag any committed secret, API key, token, or credential in plain text.
 chat:
   auto_reply: true
