@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9.0 - 2026-06-30
+- **Format Sentences now flattens case to true sentence case.** Previously it only *added* a capital at each sentence start, so ALL-CAPS or shouty input stayed capped. It now lowercases the body first, then capitalizes each sentence's first letter. Rules: the pronoun "I" (and I'm/I'll/I've/I'd) stays capital; ALL-CAPS words (NASA, API) are preserved as acronyms; ordinary proper nouns flatten to lowercase; URLs, emails, domains, @handles, and file extensions are still protected. Note: a sentence typed entirely in caps is treated as all-acronyms and is left as-is by design.
+- Bumped service-worker cache to `unistyle-v9` so the engine fix reaches installed PWA users (engine.js is served cache-first and only refreshes on a cache-name change).
+
 ## 1.8.1 - 2026-05-31
 - Replaced em dashes with plain hyphens in the in-page panel toast messages ("Selection lost", "can't replace text here", "engine not loaded") so they render consistently across fonts and platforms.
 
