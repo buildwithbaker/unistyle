@@ -16,9 +16,24 @@ share the same Unicode formatting engine.
 - GitHub Pages serves the repo root to the custom domain in `CNAME`
   (unistyle.io). No workflow builds the site - merging a PR into main publishes it.
 
-## Branching (main is protected)
-`main` is protected - direct pushes are rejected. Branch, commit, push, open a
-PR, then squash-merge once CI is green. Never run `git push origin main`.
+## Branching (main is protected - PR only)
+
+`main` is protected: direct pushes are rejected. **Never run `git push origin main`.**
+
+1. `git checkout main && git pull origin main` - start from an up-to-date main
+2. `git checkout -b <type>/<slug>` - branch BEFORE staging, so local `main` never diverges
+3. edit, then `git add -- <explicit paths>` - never `git add -A`
+4. `git commit -m "<message>"`
+5. `git push -u origin <branch>`
+6. `gh pr create --base main --fill`
+7. `gh pr checks <branch> --watch` - wait for the required checks
+8. `gh pr merge <branch> --squash --delete-branch`
+9. `git checkout main && git pull origin main`
+
+Never merge while a required check is failing or pending, and never disable a check to
+force a merge through - stop and report instead.
+
+Merging a PR into `main` publishes the repo root to unistyle.io - there is no build step.
 
 ## Releases (Chrome Web Store contract)
 - The extension has a real release contract. For every CWS submission:
