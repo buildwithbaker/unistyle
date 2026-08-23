@@ -44,7 +44,7 @@ function graphemes(text) {
 /* Returns true if a grapheme is an emoji / pictograph / regional indicator
  * that should NOT receive combining marks (they'd break the visible glyph). */
 const _emojiRe = /\p{Extended_Pictographic}|\p{Emoji_Component}|\p{Regional_Indicator}/u;
-const isEmojiGrapheme = g => g.length > 1 || _emojiRe.test(g);
+const isEmojiGrapheme = g => g.length > 1 || (g.codePointAt(0) > 0x7F && _emojiRe.test(g));
 
 /* ── Exception maps ───────────────────────────────────── */
 const SCRIPT_LOWER = [
@@ -93,7 +93,7 @@ const DS_UPPER = [
 const SMALL_CAPS = {
   'a':'ᴀ','b':'ʙ','c':'ᴄ','d':'ᴅ','e':'ᴇ','f':'ꜰ','g':'ɢ','h':'ʜ',
   'i':'ɪ','j':'ᴊ','k':'ᴋ','l':'ʟ','m':'ᴍ','n':'ɴ','o':'ᴏ','p':'ᴘ',
-  'q':'Q','r':'ʀ','s':'ꜱ','t':'ᴛ','u':'ᴜ','v':'ᴠ','w':'ᴡ','x':'x',
+  'q':'ꞯ','r':'ʀ','s':'ꜱ','t':'ᴛ','u':'ᴜ','v':'ᴠ','w':'ᴡ','x':'x',
   'y':'ʏ','z':'ᴢ'
 };
 
