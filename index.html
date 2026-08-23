@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -68,16 +68,11 @@
   }
   </script>
 
-  <!-- Google AdSense - DISABLED awaiting AdSense approval. To re-enable, uncomment
-       the script tag below AND the ad unit block lower in this file, then replace
-       ca-pub-XXXXXXXXXX with the real publisher ID in both places.
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
-  -->
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+      /* ─────────────────────────────────────────────────────────────────────
        * Build with Baker v1.3 indigo-only umbrella palette (canonical tokens).
        * Source of truth: project-blueprints/build-with-baker/shared/palette.css
        * Decision brief:  project-blueprints/build-with-baker/future-enhancements/
@@ -88,7 +83,7 @@
        * the --bwb-* block here to match shared/palette.css; local tokens follow
        * automatically. Static site so we can't @import the CSS file; we inline-
        * copy the umbrella tokens and treat divergence as a drift bug.
-       * â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+       * ───────────────────────────────────────────────────────────────────── */
 
       /* BwB umbrella brand - the umbrella's saturated brand color. Per-product
        * accents may add their own (see UniStyle amber --us-accent below). */
@@ -114,12 +109,12 @@
       --bwb-status-danger:        #B82F2F;
       --bwb-status-info:          #3A6FA8;
 
-      /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+      /* ─────────────────────────────────────────────────────────────────────
        * UniStyle local tokens - alias to BwB umbrella above.
        * Local names preserved for compatibility with existing class-level CSS.
        * UniStyle-specific values (--primary-light, --text-light, --text-dark)
        * stay inline because they have no BwB equivalent.
-       * â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+       * ───────────────────────────────────────────────────────────────────── */
       --primary:        var(--bwb-brand-primary);
       --primary-dark:   var(--bwb-brand-primary-hover);
       --primary-light:  #4A6BB8;                          /* UniStyle-only: lifted indigo for chip-bg */
@@ -158,10 +153,10 @@
 
     .app { display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
 
-    /* â”€â”€ Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Header ─────────────────────────────────────────── */
     .app-header {
       background: var(--primary-dark);
-      border-bottom: 3px solid var(--us-accent);   /* was var(--accent) â€” now visible amber rule */
+      border-bottom: 3px solid var(--us-accent);   /* was var(--accent) — now visible amber rule */
       flex-shrink: 0;
       padding: 12px 20px;
       display: flex;
@@ -226,7 +221,7 @@
     .btn-header:hover { background: rgba(255,255,255,0.2); color: #fff; }
     #installBtn { display: none; }
 
-    /* â”€â”€ Two-panel layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Two-panel layout ────────────────────────────────── */
     .panels {
       flex: 1;
       display: grid;
@@ -248,7 +243,7 @@
       overflow: hidden;
     }
 
-    /* â”€â”€ Left panel â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Left panel ──────────────────────────────────────── */
     .left-panel {
       background: var(--primary);
       display: flex;
@@ -284,7 +279,7 @@
     }
     .btn-input:hover { background: rgba(255,255,255,0.2); color: #fff; }
 
-    /* â”€â”€ Primary action row (Format Sentences) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Primary action row (Format Sentences) ───────────── */
     .primary-action-row { padding-top: 1px; }
     .btn-format-primary {
       width: 100%;
@@ -302,7 +297,7 @@
     .btn-format-primary:hover { filter: brightness(1.1); }
     .btn-format-primary:active { transform: scale(0.99); }
 
-    /* â”€â”€ Transform buttons â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Transform buttons ───────────────────────────────── */
     .transform-row { display: flex; gap: 4px; flex-wrap: wrap; }
     .btn-transform {
       background: rgba(255,255,255,0.07);
@@ -319,7 +314,7 @@
     .btn-transform:hover { background: rgba(255,255,255,0.15); color: rgba(245,240,232,0.88); }
     .btn-chars-toggle.open { background: rgba(255,255,255,0.22) !important; color: #fff !important; }
 
-    /* â”€â”€ Special character buttons â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Special character buttons ───────────────────────── */
     .special-chars-row {
       display: none;
       flex-wrap: wrap;
@@ -375,7 +370,7 @@
     #inputText::placeholder { color: #94a3b8; }
     #inputText:focus { border-color: rgba(43,74,139,0.8); box-shadow: 0 0 0 2px rgba(43,74,139,0.28); }
 
-    /* â”€â”€ Char counter â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Char counter ────────────────────────────────────── */
     .char-counter {
       padding: 4px 14px 2px;
       font-size: 10.5px;
@@ -383,7 +378,7 @@
       flex-shrink: 0;
     }
 
-    /* â”€â”€ Character limit bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Character limit bar ─────────────────────────────── */
     .limit-bar-wrap {
       padding: 2px 14px 10px;
       flex-shrink: 0;
@@ -433,7 +428,7 @@
     }
     .limit-exceeded { color: #fca5a5 !important; }
 
-    /* â”€â”€ Right panel â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Right panel ─────────────────────────────────────── */
     .right-panel {
       background: var(--white);
       display: flex;
@@ -447,7 +442,7 @@
       justify-content: space-between;
     }
 
-    /* â”€â”€ Font size slider â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Font size slider ────────────────────────────────── */
     .size-ctrl {
       display: flex;
       align-items: center;
@@ -467,7 +462,7 @@
       cursor: pointer;
     }
 
-    /* â”€â”€ Style search â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Style search ────────────────────────────────────── */
     .search-row {
       padding: 6px 14px 2px;
       flex-shrink: 0;
@@ -490,7 +485,7 @@
     }
     .style-search::placeholder { color: #94a3b8; }
 
-    /* â”€â”€ Filter chips â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Filter chips ────────────────────────────────────── */
     .filter-chips { display: flex; gap: 6px; padding: 6px 14px 4px; flex-shrink: 0; }
     .chip {
       font-size: 11px;
@@ -511,7 +506,7 @@
       padding: 10px 14px 8px;
     }
 
-    /* â”€â”€ Style rows â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Style rows ──────────────────────────────────────── */
     .style-row {
       display: flex;
       align-items: center;
@@ -525,7 +520,7 @@
     }
     .style-row:hover { border-color: var(--us-accent); }
 
-    /* â”€â”€ Pill cell (pill + compat dots) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Pill cell (pill + compat dots) ─────────────────── */
     .pill-cell { display: flex; flex-direction: column; align-items: center; gap: 3px; flex-shrink: 0; }
     .style-pill {
       font-size: 9.5px;
@@ -541,7 +536,7 @@
       white-space: nowrap;
     }
 
-    /* â”€â”€ Platform compat dots â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Platform compat dots ────────────────────────────── */
     .compat-row { display: flex; gap: 2px; }
     .cd {
       font-size: 7px;
@@ -587,7 +582,7 @@
     .copy-btn:active { transform: scale(0.95); }
     .copy-btn.copied { background: #2a7a3b; }
 
-    /* â”€â”€ Heart / favorites â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Heart / favorites ───────────────────────────────── */
     .heart-btn {
       background: transparent;
       border: none;
@@ -605,12 +600,12 @@
     .heart-btn.active { color: var(--us-accent); }
     .heart-btn:active { transform: scale(1.3); }
 
-    /* â”€â”€ Zalgo slider â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Zalgo slider ────────────────────────────────────── */
     .zalgo-ctrl { display: flex; align-items: center; gap: 5px; flex-shrink: 0; }
     .zalgo-ctrl input[type=range] { width: 56px; accent-color: var(--accent); }
     .zalgo-level { font-size: 9px; font-weight: 700; color: var(--accent); min-width: 40px; text-align: left; }
 
-    /* â”€â”€ Combo builder â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Combo builder ───────────────────────────────────── */
     .combo-section {
       flex-shrink: 0;
       padding: 9px 14px 11px;
@@ -636,7 +631,7 @@
     .combo-pill { background: #e8f0fe; color: var(--primary); border-color: #b0c4de; min-width: 60px; }
     .combo-row { margin-bottom: 0; }
 
-    /* â”€â”€ History dropdown â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── History dropdown ────────────────────────────────── */
     .hist-dropdown {
       display: none;
       position: fixed;
@@ -684,7 +679,7 @@
     }
     .hist-use:hover { background: var(--primary-light); }
 
-    /* â”€â”€ Tooltips â€” rendered via JS portal (position:fixed bypasses all overflow:hidden) â”€â”€ */
+    /* ── Tooltips — rendered via JS portal (position:fixed bypasses all overflow:hidden) ── */
     #tt-portal {
       position: fixed;
       background: #1a2535;
@@ -703,7 +698,7 @@
       transition: opacity 0.15s;
     }
 
-    /* â”€â”€ Mobile help bar (replaces desktop tooltip portal on touch devices) â”€â”€ */
+    /* ── Mobile help bar (replaces desktop tooltip portal on touch devices) ── */
     .mobile-help-bar {
       display: none;
       position: fixed;
@@ -751,7 +746,7 @@
       border-color: var(--us-accent);
     }
 
-    /* â”€â”€ Footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Footer ──────────────────────────────────────────── */
     .app-footer {
       background: var(--primary-dark);
       border-top: 3px solid var(--us-accent);
@@ -785,7 +780,7 @@
       text-decoration: none;
     }
 
-    /* â”€â”€ Mobile â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Mobile ──────────────────────────────────────────── */
     @media (max-width: 680px) {
       .panels { grid-template-columns: 1fr; grid-template-rows: 45dvh 1fr; }
       .left-panel { border-right: none; border-bottom: 2px solid var(--primary-dark); }
@@ -982,7 +977,7 @@
     }
     @media (max-width: 680px) { .ext-section { display: none; } }
 
-    /* â”€â”€ Post-copy aha-nudge â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ── Post-copy aha-nudge ─────────────────────────────── */
     /* Shown once per session beneath the just-copied row. Amber border ties
        it to the per-product accent; --us-accent-deep text for AA on the soft
        amber fill; Ko-fi vendor red on the tip pill. */
@@ -1036,7 +1031,7 @@
     <div class="header-actions">
       <button id="installBtn" class="btn-header"
         data-tip="Install as an app on your device for offline use">
-        â¬‡ Install App
+        ⬇ Install App
       </button>
     </div>
   </header>
@@ -1052,7 +1047,7 @@
           <span class="panel-label">Text Format Options</span>
           <div class="input-actions">
             <button class="btn-input" id="histBtn"
-              data-tip="Browse your last 10 texts â€” entries auto-save as you type and on clear">
+              data-tip="Browse your last 10 texts — entries auto-save as you type and on clear">
               History
             </button>
             <button class="btn-input" id="clearBtn"
@@ -1063,85 +1058,85 @@
         </div>
         <div class="primary-action-row">
           <button class="btn-format-primary" id="formatBtn"
-            data-tip="Smart sentence cleanup â€” fixes capitalization, removes extra spaces, and corrects punctuation spacing. Protects URLs, emails, and @mentions from being changed.">
-            âœ¦ Format Sentences
+            data-tip="Smart sentence cleanup — fixes capitalization, removes extra spaces, and corrects punctuation spacing. Protects URLs, emails, and @mentions from being changed.">
+            ✦ Format Sentences
           </button>
         </div>
         <div class="transform-row">
           <button class="btn-transform" id="capsBtn"   data-tip="Convert all text to UPPERCASE">CAPS</button>
           <button class="btn-transform" id="lowerBtn"  data-tip="Convert all text to lowercase">lower</button>
           <button class="btn-transform" id="titleBtn"  data-tip="Capitalize the first letter of every word">Title Case</button>
-          <button class="btn-transform" id="stripBtn"  data-tip="Remove Unicode formatting â€” converts ð›ð¨ð¥ð, ð“ˆð’¸ð“‡ð’¾ð“…ð“‰, ï½–ï½ï½ï½ï½’ï½—ï½ï½–ï½… back to plain text">Strip Unicode</button>
+          <button class="btn-transform" id="stripBtn"  data-tip="Remove Unicode formatting — converts 𝐛𝐨𝐥𝐝, 𝓈𝒸𝓇𝒾𝓅𝓉, ｖａｐｏｒｗａｖｅ back to plain text">Strip Unicode</button>
           <button class="btn-transform" id="removeFmtBtn"  data-tip="Remove formatting - turn bold/italic/markdown and pasted rich text into plain text, like Paste as plain text">Remove Formatting</button>
           <button class="btn-transform btn-chars-toggle" id="charsToggle"
             aria-expanded="false" aria-controls="specialCharsRow"
-            data-tip="Show/hide special character insert buttons â€” em dash, smart quotes, arrows, math symbols, and more">Chars â–¾</button>
+            data-tip="Show/hide special character insert buttons — em dash, smart quotes, arrows, math symbols, and more">Chars ▾</button>
           <button class="btn-transform btn-chars-toggle" id="emojiToggle"
             aria-expanded="false" aria-controls="emojiRow"
-            data-tip="Show/hide an emoji insert tray â€” common faces, hearts, hands, and symbols">Emoji â–¾</button>
-          <label class="help-toggle" data-tip="Show explanatory tooltips on hover â€” uncheck for a cleaner power-user UI">
+            data-tip="Show/hide an emoji insert tray — common faces, hearts, hands, and symbols">Emoji ▾</button>
+          <label class="help-toggle" data-tip="Show explanatory tooltips on hover — uncheck for a cleaner power-user UI">
             <input type="checkbox" id="helpToggle" checked />
             <span>Help Text</span>
           </label>
         </div>
         <div class="special-chars-row" id="specialCharsRow">
           <span class="chars-label">Insert:</span>
-          <button class="btn-special" data-char="â€”" aria-label="Insert em dash" data-tip="Em dash â€” long dash, great for parenthetical asides or replacing comma/semicolon">â€”</button>
-          <button class="btn-special" data-char="â€“" aria-label="Insert en dash" data-tip="En dash â€“ used for ranges (2020â€“2024) and compound adjectives">â€“</button>
-          <button class="btn-special" data-char="â€¦" aria-label="Insert ellipsis" data-tip="Ellipsis â€¦ one character, not three periods â€” cleaner and more semantic">â€¦</button>
+          <button class="btn-special" data-char="—" aria-label="Insert em dash" data-tip="Em dash — long dash, great for parenthetical asides or replacing comma/semicolon">—</button>
+          <button class="btn-special" data-char="–" aria-label="Insert en dash" data-tip="En dash – used for ranges (2020–2024) and compound adjectives">–</button>
+          <button class="btn-special" data-char="…" aria-label="Insert ellipsis" data-tip="Ellipsis … one character, not three periods — cleaner and more semantic">…</button>
           <button class="btn-special" data-char="&ldquo;" aria-label="Insert left double quote" data-tip='Left double quote " (opening smart quote)'>&ldquo;</button>
           <button class="btn-special" data-char="&rdquo;" aria-label="Insert right double quote" data-tip='Right double quote " (closing smart quote)'>&rdquo;</button>
           <button class="btn-special" data-char="&lsquo;" aria-label="Insert left single quote" data-tip="Left single quote ' (opening smart quote)">&lsquo;</button>
           <button class="btn-special" data-char="&rsquo;" aria-label="Insert right single quote" data-tip="Right single quote ' (closing smart quote / apostrophe)">&rsquo;</button>
-          <button class="btn-special" data-char="Â©" aria-label="Insert copyright symbol" data-tip="Copyright Â©">Â©</button>
-          <button class="btn-special" data-char="Â®" aria-label="Insert registered trademark symbol" data-tip="Registered trademark Â®">Â®</button>
-          <button class="btn-special" data-char="â„¢" aria-label="Insert trademark symbol" data-tip="Trademark â„¢">â„¢</button>
-          <button class="btn-special" data-char="Â°" aria-label="Insert degree symbol" data-tip="Degree symbol Â° â€” temperature, angles, coordinates">Â°</button>
-          <button class="btn-special" data-char="â€¢" aria-label="Insert bullet point" data-tip="Bullet point â€¢">â€¢</button>
-          <button class="btn-special" data-char="â†’" aria-label="Insert right arrow" data-tip="Right arrow â†’">â†’</button>
-          <button class="btn-special" data-char="â†" aria-label="Insert left arrow" data-tip="Left arrow â†">â†</button>
-          <button class="btn-special" data-char="â†‘" aria-label="Insert up arrow" data-tip="Up arrow â†‘">â†‘</button>
-          <button class="btn-special" data-char="â†“" aria-label="Insert down arrow" data-tip="Down arrow â†“">â†“</button>
-          <button class="btn-special" data-char="â˜…" aria-label="Insert filled star" data-tip="Filled star â˜…">â˜…</button>
-          <button class="btn-special" data-char="â™¥" aria-label="Insert heart" data-tip="Heart â™¥">â™¥</button>
-          <button class="btn-special" data-char="â‰ " aria-label="Insert not equal sign" data-tip="Not equal to â‰ ">â‰ </button>
-          <button class="btn-special" data-char="â‰ˆ" aria-label="Insert approximately equal sign" data-tip="Approximately equal to â‰ˆ">â‰ˆ</button>
-          <button class="btn-special" data-char="Â±" aria-label="Insert plus minus sign" data-tip="Plus or minus Â±">Â±</button>
-          <button class="btn-special" data-char="Ã—" aria-label="Insert multiplication sign" data-tip="Multiplication sign Ã— (not the letter x)">Ã—</button>
-          <button class="btn-special" data-char="Ã·" aria-label="Insert division sign" data-tip="Division sign Ã·">Ã·</button>
-          <button class="btn-special" data-char="âˆž" aria-label="Insert infinity symbol" data-tip="Infinity âˆž">âˆž</button>
-          <button class="btn-special" data-char="Ï€" aria-label="Insert pi symbol" data-tip="Pi Ï€">Ï€</button>
+          <button class="btn-special" data-char="©" aria-label="Insert copyright symbol" data-tip="Copyright ©">©</button>
+          <button class="btn-special" data-char="®" aria-label="Insert registered trademark symbol" data-tip="Registered trademark ®">®</button>
+          <button class="btn-special" data-char="™" aria-label="Insert trademark symbol" data-tip="Trademark ™">™</button>
+          <button class="btn-special" data-char="°" aria-label="Insert degree symbol" data-tip="Degree symbol ° — temperature, angles, coordinates">°</button>
+          <button class="btn-special" data-char="•" aria-label="Insert bullet point" data-tip="Bullet point •">•</button>
+          <button class="btn-special" data-char="→" aria-label="Insert right arrow" data-tip="Right arrow →">→</button>
+          <button class="btn-special" data-char="←" aria-label="Insert left arrow" data-tip="Left arrow ←">←</button>
+          <button class="btn-special" data-char="↑" aria-label="Insert up arrow" data-tip="Up arrow ↑">↑</button>
+          <button class="btn-special" data-char="↓" aria-label="Insert down arrow" data-tip="Down arrow ↓">↓</button>
+          <button class="btn-special" data-char="★" aria-label="Insert filled star" data-tip="Filled star ★">★</button>
+          <button class="btn-special" data-char="♥" aria-label="Insert heart" data-tip="Heart ♥">♥</button>
+          <button class="btn-special" data-char="≠" aria-label="Insert not equal sign" data-tip="Not equal to ≠">≠</button>
+          <button class="btn-special" data-char="≈" aria-label="Insert approximately equal sign" data-tip="Approximately equal to ≈">≈</button>
+          <button class="btn-special" data-char="±" aria-label="Insert plus minus sign" data-tip="Plus or minus ±">±</button>
+          <button class="btn-special" data-char="×" aria-label="Insert multiplication sign" data-tip="Multiplication sign × (not the letter x)">×</button>
+          <button class="btn-special" data-char="÷" aria-label="Insert division sign" data-tip="Division sign ÷">÷</button>
+          <button class="btn-special" data-char="∞" aria-label="Insert infinity symbol" data-tip="Infinity ∞">∞</button>
+          <button class="btn-special" data-char="π" aria-label="Insert pi symbol" data-tip="Pi π">π</button>
         </div>
         <div class="special-chars-row emoji-row" id="emojiRow">
           <span class="chars-label">Emoji:</span>
-          <button class="btn-special" data-char="ðŸ˜€" aria-label="Insert grinning face" data-tip="Grinning face ðŸ˜€">ðŸ˜€</button>
-          <button class="btn-special" data-char="ðŸ˜‚" aria-label="Insert tears of joy" data-tip="Face with tears of joy ðŸ˜‚">ðŸ˜‚</button>
-          <button class="btn-special" data-char="ðŸ¥°" aria-label="Insert smiling face with hearts" data-tip="Smiling face with hearts ðŸ¥°">ðŸ¥°</button>
-          <button class="btn-special" data-char="ðŸ˜Ž" aria-label="Insert sunglasses face" data-tip="Smiling face with sunglasses ðŸ˜Ž">ðŸ˜Ž</button>
-          <button class="btn-special" data-char="ðŸ¤”" aria-label="Insert thinking face" data-tip="Thinking face ðŸ¤”">ðŸ¤”</button>
-          <button class="btn-special" data-char="ðŸ˜­" aria-label="Insert loudly crying face" data-tip="Loudly crying face ðŸ˜­">ðŸ˜­</button>
-          <button class="btn-special" data-char="ðŸ™„" aria-label="Insert eye roll" data-tip="Face with rolling eyes ðŸ™„">ðŸ™„</button>
-          <button class="btn-special" data-char="ðŸ˜¬" aria-label="Insert grimacing face" data-tip="Grimacing face ðŸ˜¬">ðŸ˜¬</button>
-          <button class="btn-special" data-char="â¤ï¸" aria-label="Insert red heart" data-tip="Red heart â¤ï¸">â¤ï¸</button>
-          <button class="btn-special" data-char="ðŸ’”" aria-label="Insert broken heart" data-tip="Broken heart ðŸ’”">ðŸ’”</button>
-          <button class="btn-special" data-char="ðŸ”¥" aria-label="Insert fire" data-tip="Fire ðŸ”¥">ðŸ”¥</button>
-          <button class="btn-special" data-char="âœ¨" aria-label="Insert sparkles" data-tip="Sparkles âœ¨">âœ¨</button>
-          <button class="btn-special" data-char="â­" aria-label="Insert star" data-tip="Star â­">â­</button>
-          <button class="btn-special" data-char="ðŸ’¯" aria-label="Insert hundred points" data-tip="Hundred points ðŸ’¯">ðŸ’¯</button>
-          <button class="btn-special" data-char="ðŸ‘" aria-label="Insert thumbs up" data-tip="Thumbs up ðŸ‘">ðŸ‘</button>
-          <button class="btn-special" data-char="ðŸ‘Ž" aria-label="Insert thumbs down" data-tip="Thumbs down ðŸ‘Ž">ðŸ‘Ž</button>
-          <button class="btn-special" data-char="ðŸ™" aria-label="Insert folded hands" data-tip="Folded hands / thank you ðŸ™">ðŸ™</button>
-          <button class="btn-special" data-char="ðŸ‘€" aria-label="Insert eyes" data-tip="Eyes ðŸ‘€">ðŸ‘€</button>
-          <button class="btn-special" data-char="âœ…" aria-label="Insert check mark" data-tip="Check mark âœ…">âœ…</button>
-          <button class="btn-special" data-char="âŒ" aria-label="Insert cross mark" data-tip="Cross mark âŒ">âŒ</button>
-          <button class="btn-special" data-char="âš ï¸" aria-label="Insert warning sign" data-tip="Warning âš ï¸">âš ï¸</button>
-          <button class="btn-special" data-char="ðŸš€" aria-label="Insert rocket" data-tip="Rocket ðŸš€">ðŸš€</button>
-          <button class="btn-special" data-char="ðŸŽ‰" aria-label="Insert party popper" data-tip="Party popper ðŸŽ‰">ðŸŽ‰</button>
-          <button class="btn-special" data-char="ðŸ’¡" aria-label="Insert light bulb" data-tip="Light bulb ðŸ’¡">ðŸ’¡</button>
-          <button class="btn-special" data-char="ðŸ“Œ" aria-label="Insert pushpin" data-tip="Pushpin ðŸ“Œ">ðŸ“Œ</button>
-          <button class="btn-special" data-char="ðŸ“Ž" aria-label="Insert paperclip" data-tip="Paperclip ðŸ“Ž">ðŸ“Ž</button>
-          <button class="btn-special" data-char="ðŸ”—" aria-label="Insert link" data-tip="Link ðŸ”—">ðŸ”—</button>
-          <button class="btn-special" data-char="â˜•" aria-label="Insert coffee" data-tip="Coffee â˜•">â˜•</button>
+          <button class="btn-special" data-char="😀" aria-label="Insert grinning face" data-tip="Grinning face 😀">😀</button>
+          <button class="btn-special" data-char="😂" aria-label="Insert tears of joy" data-tip="Face with tears of joy 😂">😂</button>
+          <button class="btn-special" data-char="🥰" aria-label="Insert smiling face with hearts" data-tip="Smiling face with hearts 🥰">🥰</button>
+          <button class="btn-special" data-char="😎" aria-label="Insert sunglasses face" data-tip="Smiling face with sunglasses 😎">😎</button>
+          <button class="btn-special" data-char="🤔" aria-label="Insert thinking face" data-tip="Thinking face 🤔">🤔</button>
+          <button class="btn-special" data-char="😭" aria-label="Insert loudly crying face" data-tip="Loudly crying face 😭">😭</button>
+          <button class="btn-special" data-char="🙄" aria-label="Insert eye roll" data-tip="Face with rolling eyes 🙄">🙄</button>
+          <button class="btn-special" data-char="😬" aria-label="Insert grimacing face" data-tip="Grimacing face 😬">😬</button>
+          <button class="btn-special" data-char="❤️" aria-label="Insert red heart" data-tip="Red heart ❤️">❤️</button>
+          <button class="btn-special" data-char="💔" aria-label="Insert broken heart" data-tip="Broken heart 💔">💔</button>
+          <button class="btn-special" data-char="🔥" aria-label="Insert fire" data-tip="Fire 🔥">🔥</button>
+          <button class="btn-special" data-char="✨" aria-label="Insert sparkles" data-tip="Sparkles ✨">✨</button>
+          <button class="btn-special" data-char="⭐" aria-label="Insert star" data-tip="Star ⭐">⭐</button>
+          <button class="btn-special" data-char="💯" aria-label="Insert hundred points" data-tip="Hundred points 💯">💯</button>
+          <button class="btn-special" data-char="👍" aria-label="Insert thumbs up" data-tip="Thumbs up 👍">👍</button>
+          <button class="btn-special" data-char="👎" aria-label="Insert thumbs down" data-tip="Thumbs down 👎">👎</button>
+          <button class="btn-special" data-char="🙏" aria-label="Insert folded hands" data-tip="Folded hands / thank you 🙏">🙏</button>
+          <button class="btn-special" data-char="👀" aria-label="Insert eyes" data-tip="Eyes 👀">👀</button>
+          <button class="btn-special" data-char="✅" aria-label="Insert check mark" data-tip="Check mark ✅">✅</button>
+          <button class="btn-special" data-char="❌" aria-label="Insert cross mark" data-tip="Cross mark ❌">❌</button>
+          <button class="btn-special" data-char="⚠️" aria-label="Insert warning sign" data-tip="Warning ⚠️">⚠️</button>
+          <button class="btn-special" data-char="🚀" aria-label="Insert rocket" data-tip="Rocket 🚀">🚀</button>
+          <button class="btn-special" data-char="🎉" aria-label="Insert party popper" data-tip="Party popper 🎉">🎉</button>
+          <button class="btn-special" data-char="💡" aria-label="Insert light bulb" data-tip="Light bulb 💡">💡</button>
+          <button class="btn-special" data-char="📌" aria-label="Insert pushpin" data-tip="Pushpin 📌">📌</button>
+          <button class="btn-special" data-char="📎" aria-label="Insert paperclip" data-tip="Paperclip 📎">📎</button>
+          <button class="btn-special" data-char="🔗" aria-label="Insert link" data-tip="Link 🔗">🔗</button>
+          <button class="btn-special" data-char="☕" aria-label="Insert coffee" data-tip="Coffee ☕">☕</button>
         </div>
       </div>
       <textarea id="inputText"
@@ -1150,7 +1145,7 @@
         spellcheck="true"
         autocorrect="on"
       ></textarea>
-      <div class="char-counter" id="charCounter">0 chars Â· 0 words</div>
+      <div class="char-counter" id="charCounter">0 chars · 0 words</div>
       <div class="limit-bar-wrap">
         <div class="limit-bar-track">
           <div class="limit-bar-fill" id="limitBarFill"></div>
@@ -1158,7 +1153,7 @@
           <div class="limit-marker lm-right" style="left:66.67%"><span>Discord 2k</span></div>
           <div class="limit-marker lm-left" style="left:73.33%"><span>Instagram 2.2k</span></div>
         </div>
-        <div class="limit-status" id="limitStatus">X/Twitter 280 Â· Discord 2,000 Â· Instagram 2,200</div>
+        <div class="limit-status" id="limitStatus">X/Twitter 280 · Discord 2,000 · Instagram 2,200</div>
       </div>
     </div>
 
@@ -1166,7 +1161,7 @@
     <div class="right-panel">
       <div class="panel-header">
         <span class="panel-label">Formatted Styles</span>
-        <div class="size-ctrl" data-tip="Preview text size â€” does not affect the copied text">
+        <div class="size-ctrl" data-tip="Preview text size — does not affect the copied text">
           <span class="size-lbl size-lbl-sm">A</span>
           <input type="range" id="sizeSlider" min="11" max="22" step="1" value="14" aria-label="Output font size" />
           <span class="size-lbl size-lbl-lg">A</span>
@@ -1174,12 +1169,12 @@
       </div>
       <div class="search-row">
         <input type="search" id="styleSearch" class="style-search"
-          placeholder="Search styles â€” bold, script, zalgoâ€¦"
+          placeholder="Search styles — bold, script, zalgo…"
           autocomplete="off" />
       </div>
       <div class="filter-chips">
         <button class="chip active" data-filter="all" aria-pressed="true">All</button>
-        <button class="chip" data-filter="favs" aria-pressed="false">â˜… Favorites</button>
+        <button class="chip" data-filter="favs" aria-pressed="false">★ Favorites</button>
       </div>
       <div class="style-nav" id="styleNav">
         <button id="stylePrevBtn" class="btn-style-nav" aria-label="Previous styles">&#8592; Prev</button>
@@ -1209,7 +1204,7 @@
           <div class="pill-cell">
             <span class="style-pill combo-pill">Combo</span>
           </div>
-          <span class="style-output placeholder" id="combo-out">Waiting for inputâ€¦</span>
+          <span class="style-output placeholder" id="combo-out">Waiting for input…</span>
           <button class="copy-btn" id="combo-copy"
             data-tip="Copy this combined style to clipboard">Copy</button>
         </div>
@@ -1219,25 +1214,11 @@
   </div>
   </main>
 
-  <!-- AdSense ad unit - DISABLED awaiting AdSense approval. To re-enable, uncomment
-       this block AND the script tag in <head>, then replace ca-pub-XXXXXXXXXX in
-       data-ad-client and data-ad-slot with real publisher and slot IDs.
-  <div class="adsense-banner" style="background:var(--primary-dark);padding:4px 16px 0;">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-XXXXXXXXXX"
-         data-ad-slot="XXXXXXXXXX"
-         data-ad-format="horizontal"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-  -->
-
   <!-- Footer -->
   <footer class="app-footer">
     <a href="privacy.html">Privacy Policy</a>
     <!-- Ko-fi tip button -->
-    <a href="https://ko-fi.com/abaker421" class="kofi-button" target="_blank" rel="noopener noreferrer" aria-label="Support UniStyle on Ko-fi">â˜• Support on Ko-fi</a>
+    <a href="https://ko-fi.com/abaker421" class="kofi-button" target="_blank" rel="noopener noreferrer" aria-label="Support UniStyle on Ko-fi">☕ Support on Ko-fi</a>
     <a href="https://github.com/buildwithbaker/unistyle" target="_blank" rel="noopener" aria-label="UniStyle source code on GitHub">GitHub</a>
     <a href="https://buildwithbaker.io" target="_blank" rel="noopener" aria-label="Build with Baker - the maker brand behind UniStyle" class="bwb-attrib">Made by Build with Baker</a>
   </footer>
@@ -1249,7 +1230,7 @@
   <div id="sr-announce" aria-live="polite" aria-atomic="true"
     style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;"></div>
 
-  <!-- Tooltip portal â€” position:fixed, never clipped by parent overflow:hidden.
+  <!-- Tooltip portal — position:fixed, never clipped by parent overflow:hidden.
        Desktop only - on mobile (pointer:coarse) the .mobile-help-bar below replaces it. -->
   <div id="tt-portal"></div>
 
@@ -1357,7 +1338,7 @@
 
     <details class="faq-item">
       <summary class="faq-q">What is the difference between UniStyle and Discord's built-in Markdown bold?</summary>
-      <p class="faq-a">Markdown formatting (like <code>**bold**</code> or <code>*italic*</code>) is interpreted by the platform showing the text - it works only where the platform supports it. Discord supports Markdown in chat messages but not in usernames, status, bios, or external integrations. Notion supports its own Markdown variant but strips it in some fields. Twitter does not support Markdown at all. UniStyle generates Unicode Mathematical Alphanumeric Symbols and related blocks - real characters like ð›ð¨ð¥ð, ð‘–ð‘¡ð‘Žð‘™ð‘–ð‘, ð¬ðœð«ð¢ð©ð­ - that display the same style on any platform that renders Unicode (which is essentially every modern text field).</p>
+      <p class="faq-a">Markdown formatting (like <code>**bold**</code> or <code>*italic*</code>) is interpreted by the platform showing the text - it works only where the platform supports it. Discord supports Markdown in chat messages but not in usernames, status, bios, or external integrations. Notion supports its own Markdown variant but strips it in some fields. Twitter does not support Markdown at all. UniStyle generates Unicode Mathematical Alphanumeric Symbols and related blocks - real characters like 𝐛𝐨𝐥𝐝, 𝑖𝑡𝑎𝑙𝑖𝑐, 𝐬𝐜𝐫𝐢𝐩𝐭 - that display the same style on any platform that renders Unicode (which is essentially every modern text field).</p>
     </details>
 
     <details class="faq-item">
@@ -1386,11 +1367,11 @@
 <script>
   'use strict';
 
-  /* â”€â”€ Cached output element refs (populated in buildRows) */
+  /* ── Cached output element refs (populated in buildRows) */
   const outputEls = {};
   let zalgoSlider = null;
 
-  /* â”€â”€ DOM refs â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── DOM refs ────────────────────────────────────────── */
   const inputEl      = document.getElementById('inputText');
   const outputList   = document.getElementById('outputList');
   const formatBtn    = document.getElementById('formatBtn');
@@ -1419,10 +1400,10 @@
   const histDropdown = document.getElementById('hist-dropdown');
   const filterChips  = document.querySelectorAll('.chip[data-filter]');
 
-  /* â”€â”€ Favorites â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── Favorites ───────────────────────────────────────── */
   let favorites = new Set(JSON.parse(localStorage.getItem('tf-favs') || '[]'));
   let activeFilter = 'all';
-  /* â”€â”€ Mobile pagination state â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── Mobile pagination state ─────────────────────────── */
   let mobilePage = 0;
   let mobilePool = []; // filter-visible rows, updated by applyVisibility
   let perPage    = 5;  // dynamic: how many whole rows fit with NO internal scroll (recomputed on mobile)
@@ -1432,12 +1413,12 @@
   function toggleFavorite(key, btn) {
     favorites.has(key) ? favorites.delete(key) : favorites.add(key);
     btn.classList.toggle('active', favorites.has(key));
-    btn.textContent = favorites.has(key) ? 'â˜…' : 'â˜†';
+    btn.textContent = favorites.has(key) ? '★' : '☆';
     saveFavorites();
     applyVisibility();
   }
 
-  /* â”€â”€ Unified visibility (search + filter chip) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── Unified visibility (search + filter chip) ────────── */
   function applyVisibility() {
     const q = styleSearch.value.toLowerCase().trim();
     const rows = document.querySelectorAll('.style-row[data-key]');
@@ -1461,7 +1442,7 @@
         noFavMsg = document.createElement('p');
         noFavMsg.id = 'no-favs-msg';
         noFavMsg.style.cssText = 'font-size:12px;color:#bbb;padding:12px 4px;font-style:italic;';
-        noFavMsg.textContent = 'No favorites yet â€” click â˜† on any style to pin it here.';
+        noFavMsg.textContent = 'No favorites yet — click ☆ on any style to pin it here.';
         outputList.prepend(noFavMsg);
       }
       noFavMsg.style.display = '';
@@ -1486,7 +1467,7 @@
     applyMobilePagination();
   }
 
-  /* â”€â”€ Mobile style pagination â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── Mobile style pagination ─────────────────────────── */
   const styleNav     = document.getElementById('styleNav');
   const stylePrevBtn = document.getElementById('stylePrevBtn');
   const styleNextBtn = document.getElementById('styleNextBtn');
@@ -1550,7 +1531,7 @@
     mobilePage = 0;
     applyMobilePagination();
   }, { passive: true });
-  /* â”€â”€ History â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── History ─────────────────────────────────────────── */
   let histIsOpen = false;
 
   function saveToHistory(text) {
@@ -1580,7 +1561,7 @@
       const item = document.createElement('div'); item.className = 'hist-item';
       const prev = document.createElement('span'); prev.className = 'hist-preview';
       const raw = h.text.replace(/\n/g,' ').trim();
-      prev.textContent = raw.length > 68 ? raw.slice(0,68)+'â€¦' : raw;
+      prev.textContent = raw.length > 68 ? raw.slice(0,68)+'…' : raw;
       const btn = document.createElement('button'); btn.className = 'hist-use'; btn.textContent = 'Use';
       btn.addEventListener('click', () => { inputEl.value = h.text; updateOutputs(); closeHistory(); inputEl.focus(); });
       item.append(prev, btn); histDropdown.appendChild(item);
@@ -1603,7 +1584,7 @@
   }
   function histOutside(e) { if (!histDropdown.contains(e.target) && e.target !== histBtn) closeHistory(); }
 
-  /* â”€â”€ Build rows â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── Build rows ──────────────────────────────────────── */
   const PLAT = [{k:'d',l:'Discord',b:'D'},{k:'t',l:'X/Twitter',b:'X'},{k:'n',l:'Notion',b:'N'},{k:'s',l:'SMS',b:'S'}];
   const COMPAT_LABEL = ['Limited','Partial','Full'];
 
@@ -1631,13 +1612,13 @@
       }
 
       const out = document.createElement('span');
-      out.className = 'style-output placeholder'; out.id = 'out-'+style.key; out.textContent = 'Waiting for inputâ€¦';
+      out.className = 'style-output placeholder'; out.id = 'out-'+style.key; out.textContent = 'Waiting for input…';
       outputEls[style.key] = out;
 
       const heartBtn = document.createElement('button');
       heartBtn.className = 'heart-btn'+(favorites.has(style.key)?' active':'');
       heartBtn.setAttribute('aria-label','Favorite '+style.label);
-      heartBtn.textContent = favorites.has(style.key) ? 'â˜…' : 'â˜†';
+      heartBtn.textContent = favorites.has(style.key) ? '★' : '☆';
       heartBtn.addEventListener('click', () => toggleFavorite(style.key, heartBtn));
 
       const copyBtn = document.createElement('button');
@@ -1666,7 +1647,7 @@
     applyVisibility();
   }
 
-  /* â”€â”€ Limit bar config â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── Limit bar config ─────────────────────────────────── */
   const LIMITS = [
     { name: 'X/Twitter', n:  280 },
     { name: 'Discord',   n: 2000 },
@@ -1674,12 +1655,12 @@
   ];
   const BAR_MAX = 3000;
 
-  /* â”€â”€ Char counter + limit bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── Char counter + limit bar ────────────────────────── */
   function updateCounter() {
     const raw = inputEl.value;
     const chars = [...raw].length;
     const words = raw.trim() ? raw.trim().split(/\s+/).length : 0;
-    charCounter.textContent = chars.toLocaleString() + ' chars Â· ' + words.toLocaleString() + ' words';
+    charCounter.textContent = chars.toLocaleString() + ' chars · ' + words.toLocaleString() + ' words';
     updateLimitBar(chars);
   }
 
@@ -1699,36 +1680,36 @@
 
     if (!limitStatus) return;
     if (chars === 0) {
-      limitStatus.textContent = 'X/Twitter 280 Â· Discord 2,000 Â· Instagram 2,200';
+      limitStatus.textContent = 'X/Twitter 280 · Discord 2,000 · Instagram 2,200';
       limitStatus.classList.remove('limit-exceeded');
     } else if (active) {
       const remaining = active.n - chars;
       limitStatus.textContent = remaining + ' left for ' + active.name + ' (' + active.n.toLocaleString() + ' char limit)';
       limitStatus.classList.toggle('limit-exceeded', remaining < active.n * 0.1);
     } else {
-      limitStatus.textContent = 'Over all limits â€” X/Twitter Â· Discord Â· Instagram';
+      limitStatus.textContent = 'Over all limits — X/Twitter · Discord · Instagram';
       limitStatus.classList.add('limit-exceeded');
     }
   }
 
-  /* â”€â”€ Combo modifier transforms â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── Combo modifier transforms ───────────────────────── */
   /* Maps comboMod <select> values to transform functions. The "none" key returns
      null so updateCombo skips the apply step. Strikethrough and underline use the
      same combining marks as the standalone styles in engine.js. */
   const COMBO_MODS = {
     none:   null,
-    strike: t => [...t].map(c => c + 'Ì¶').join(''), // U+0336 combining long stroke overlay
-    under:  t => [...t].map(c => c + 'Ì²').join(''), // U+0332 combining low line
-    over:   t => [...t].map(c => c + 'Ì…').join(''), // U+0305 combining overline
+    strike: t => [...t].map(c => c + '̶').join(''), // U+0336 combining long stroke overlay
+    under:  t => [...t].map(c => c + '̲').join(''), // U+0332 combining low line
+    over:   t => [...t].map(c => c + '̅').join(''), // U+0305 combining overline
     rev:    t => [...t].reverse().join('')
   };
 
-  /* â”€â”€ Combo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── Combo ───────────────────────────────────────────── */
   function updateCombo() {
     const out = comboOut;
     if (!out) return;
     const raw = inputEl.value;
-    if (!raw.trim()) { out.textContent='Waiting for inputâ€¦'; out.className='style-output placeholder'; return; }
+    if (!raw.trim()) { out.textContent='Waiting for input…'; out.className='style-output placeholder'; return; }
     const baseStyle = STYLES.find(s => s.key === comboBase.value);
     if (!baseStyle) return;
     let result = baseStyle.fn(raw);
@@ -1737,14 +1718,14 @@
     out.textContent = result; out.className = 'style-output';
   }
 
-  /* â”€â”€ Update all outputs â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── Update all outputs ──────────────────────────────── */
   function updateOutputs() {
     const raw = inputEl.value;
     updateCounter();
     STYLES.forEach(style => {
       const el = outputEls[style.key];
       if (!el) return;
-      if (!raw.trim()) { el.textContent='Waiting for inputâ€¦'; el.className='style-output placeholder'; }
+      if (!raw.trim()) { el.textContent='Waiting for input…'; el.className='style-output placeholder'; }
       else {
         const level = style.hasSlider ? (parseInt(zalgoSlider?.value)||1) : undefined;
         el.textContent = style.fn(raw,level); el.className = 'style-output';
@@ -1753,12 +1734,12 @@
     updateCombo();
   }
 
-  /* â”€â”€ Copy â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── Copy ────────────────────────────────────────────── */
   function copyStyle(key, btn) {
     const el = outputEls[key];
     if (!el||el.classList.contains('placeholder')) return;
     navigator.clipboard.writeText(el.textContent).then(() => {
-      const orig=btn.textContent; btn.textContent='âœ“ Copied'; btn.classList.add('copied');
+      const orig=btn.textContent; btn.textContent='✓ Copied'; btn.classList.add('copied');
       srAnnounce.textContent = STYLES_MAP[key]?.label + ' style copied';
       maybeShowAhaNudge(btn.closest('.style-row'));
       setTimeout(()=>{ btn.textContent=orig; btn.classList.remove('copied'); srAnnounce.textContent=''; },1500);
@@ -1776,8 +1757,8 @@
     nudge.className = 'aha-nudge show';
     nudge.innerHTML = `
       <span class="aha-msg">Found this useful?</span>
-      <a class="aha-tip" href="https://ko-fi.com/abaker421" target="_blank" rel="noopener noreferrer">â˜• Tip</a>
-      <button class="aha-x" aria-label="Dismiss">Ã—</button>
+      <a class="aha-tip" href="https://ko-fi.com/abaker421" target="_blank" rel="noopener noreferrer">☕ Tip</a>
+      <button class="aha-x" aria-label="Dismiss">×</button>
     `;
     const fadeOut = () => { nudge.style.opacity = '0'; setTimeout(() => nudge.remove(), 300); };
     let dismissTimer = setTimeout(fadeOut, 8000);
@@ -1788,7 +1769,7 @@
     anchorRow.insertAdjacentElement('afterend', nudge);
   }
 
-  /* â”€â”€ Event listeners â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── Event listeners ─────────────────────────────────── */
   /* Per-button click-to-undo: clicking the same transform button twice in a row
      reverts the input to its pre-transform value. The tracker remembers the last
      button + its before/after values; a click that matches both rolls back, any
@@ -1820,25 +1801,25 @@
   stripBtn.addEventListener('click',  () => applyTransform(stripBtn, stripUnicode));
   removeFmtBtn.addEventListener('click', () => applyTransform(removeFmtBtn, removeFormatting));
 
-  /* â”€â”€ Chars + Emoji toggles â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── Chars + Emoji toggles ───────────────────────────── */
   charsToggle.addEventListener('click', () => {
     const open = specialCharsRow.classList.toggle('open');
     charsToggle.classList.toggle('open', open);
-    charsToggle.textContent = open ? 'Chars â–´' : 'Chars â–¾';
+    charsToggle.textContent = open ? 'Chars ▴' : 'Chars ▾';
     charsToggle.setAttribute('aria-expanded', String(open));
   });
   emojiToggle.addEventListener('click', () => {
     const open = emojiRow.classList.toggle('open');
     emojiToggle.classList.toggle('open', open);
-    emojiToggle.textContent = open ? 'Emoji â–´' : 'Emoji â–¾';
+    emojiToggle.textContent = open ? 'Emoji ▴' : 'Emoji ▾';
     emojiToggle.setAttribute('aria-expanded', String(open));
   });
 
-  /* â”€â”€ JS tooltip portal â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── JS tooltip portal ───────────────────────────────── */
   const ttPortal = document.getElementById('tt-portal');
   let ttActive = null;
 
-  /* Help text toggle â€” power users can disable tooltips */
+  /* Help text toggle — power users can disable tooltips */
   const HELP_KEY = 'unistyle-show-tips';
   const helpToggle = document.getElementById('helpToggle');
   let helpEnabled = localStorage.getItem(HELP_KEY) !== 'false';
@@ -1928,13 +1909,13 @@
     ttPortal.style.opacity = '0';
     setTimeout(() => { if (ttPortal.style.opacity === '0') ttPortal.style.display = 'none'; }, 160);
   });
-  /* â”€â”€ Special character insert â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── Special character insert ─────────────────────────── */
   function insertAtCursor(char) {
     const s = inputEl.selectionStart ?? inputEl.value.length;
     const e = inputEl.selectionEnd   ?? inputEl.value.length;
     const v = inputEl.value;
     inputEl.value = v.slice(0, s) + char + v.slice(e);
-    // focus() before setting cursor â€” some browsers reset selection on focus()
+    // focus() before setting cursor — some browsers reset selection on focus()
     inputEl.focus();
     inputEl.selectionStart = inputEl.selectionEnd = s + char.length;
     updateOutputs();
@@ -1944,7 +1925,7 @@
   });
 
   styleSearch.addEventListener('input', applyVisibility);
-  styleSearch.addEventListener('search', applyVisibility); // fires on clear (Ã—) click
+  styleSearch.addEventListener('search', applyVisibility); // fires on clear (×) click
 
   sizeSlider.addEventListener('input', () => {
     outputList.style.setProperty('--output-size', sizeSlider.value+'px');
@@ -1959,7 +1940,7 @@
     const out = comboOut;
     if (!out||out.classList.contains('placeholder')) return;
     navigator.clipboard.writeText(out.textContent).then(() => {
-      const orig=comboCopy.textContent; comboCopy.textContent='âœ“ Copied'; comboCopy.classList.add('copied');
+      const orig=comboCopy.textContent; comboCopy.textContent='✓ Copied'; comboCopy.classList.add('copied');
       srAnnounce.textContent = 'Combo style copied';
       setTimeout(()=>{ comboCopy.textContent=orig; comboCopy.classList.remove('copied'); srAnnounce.textContent=''; },1500);
     });
@@ -1981,7 +1962,7 @@
   let rafId;
   inputEl.addEventListener('input', () => { cancelAnimationFrame(rafId); rafId = requestAnimationFrame(updateOutputs); });
 
-  /* â”€â”€ Textarea auto-grow â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── Textarea auto-grow ──────────────────────────────── */
   /* Default 360px (about half the desktop left-panel card). Grows with content
      up to CSS max-height (60vh). Floor matches the CSS default so short input
      never shrinks the textarea below the user-friendly resting size. */
@@ -2001,7 +1982,7 @@
   // Initial sizing on load
   requestAnimationFrame(autoGrowInput);
 
-  /* â”€â”€ PWA install â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── PWA install ─────────────────────────────────────── */
   let deferredInstallPrompt = null;
   window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredInstallPrompt=e; installBtn.style.display='block'; });
   installBtn.addEventListener('click', async () => {
@@ -2013,12 +1994,12 @@
   });
   window.addEventListener('appinstalled', ()=>{ installBtn.style.display='none'; });
 
-  /* â”€â”€ Service worker â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── Service worker ──────────────────────────────────── */
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', ()=>{ navigator.serviceWorker.register('./sw.js').catch(()=>{}); });
   }
 
-  /* â”€â”€ Init â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ── Init ────────────────────────────────────────────── */
   buildRows();
   updateOutputs();
 </script>
