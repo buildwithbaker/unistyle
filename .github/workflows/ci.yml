@@ -49,7 +49,12 @@ jobs:
               ref = ref.split('#')[0].split('?')[0];
               if (!ref) continue;
               const target = ref.startsWith('/') ? ref.slice(1) : ref;
-              if (!fs.existsSync(path.resolve(target))) {
+              // Extensionless hrefs (e.g. "privacy") resolve the way GitHub Pages serves them.
+              const ok = fs.existsSync(path.resolve(target)) ||
+                (!path.extname(target) &&
+                  (fs.existsSync(path.resolve(target + '.html')) ||
+                   fs.existsSync(path.resolve(target, 'index.html'))));
+              if (!ok) {
                 console.log(`::error file=${page}::missing local target: ${ref}`);
                 broken++;
               }
