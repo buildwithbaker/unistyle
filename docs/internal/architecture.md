@@ -25,7 +25,7 @@ The single most important architectural fact: **`engine.js` is the single source
 |---|---|---|
 | Build | **None** | Hand-authored static site. No package.json, no bundler, no dependencies |
 | Engine | Vanilla ES, `engine.js` | Exposed on `window`/`globalThis`: `STYLES`, `STYLES_MAP`, `formatSentences`, `stripUnicode`, `removeFormatting`, `zalgoText`, `cp`, `mapRange` |
-| Web app | Single `index.html` (~100KB, inline CSS/JS) + `assets/js/engine.js` | |
+| Web app | `index.html` (inline CSS) + `assets/js/engine.js` + `assets/js/app.js` (UI logic; no inline script, so the CSP needs no `'unsafe-inline'` for scripts) | |
 | PWA | `manifest.json` + `sw.js` | Network-first for HTML, cache-first for assets |
 | Extension | MV3 — `manifest.json`, `background.js`, `content.js`, popup, `panel.css` | |
 | Hosting | GitHub Pages → custom domain via `CNAME` (unistyle.io) | No build workflow; push to main publishes |
@@ -38,7 +38,7 @@ CI runs a **root-hygiene + link check only** — no build, no test runner.
 
 ```
 unistyle/
-  index.html                  ★ Web app — shell + inline CSS + inline app JS (~100KB)
+  index.html                  ★ Web app — shell + inline CSS (app JS lives in assets/js/app.js)
   manifest.json               PWA manifest (theme #2B4A8B)
   sw.js                       service worker — CACHE_NAME 'unistyle-v8', ASSETS precache list
   privacy.html                privacy policy (linked from app + extension)
@@ -49,6 +49,7 @@ unistyle/
 
   assets/
     js/engine.js              ★ SINGLE SOURCE OF TRUTH for all transforms
+    js/app.js                 web app UI logic (rows, copy, history, limits); keep it out of index.html
     img/og-image.jpg          absolute-URL OG image (social caches linger — don't rename casually)
     icons/                    favicon-*, icon.svg, icon-pwa-*, apple-touch-icon-180, monochrome variants
 
