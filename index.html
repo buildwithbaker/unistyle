@@ -334,6 +334,12 @@
       user-select: none;
     }
     .btn-special {
+      /* 24x24 minimum target (WCAG 2.2 SC 2.5.8); the mobile rule below goes to 38px. */
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 24px;
+      min-height: 24px;
       background: rgba(255,255,255,0.07);
       color: var(--text-light);
       border: 1px solid rgba(255,255,255,0.12);
