@@ -15,6 +15,19 @@ share the same Unicode formatting engine.
 ## Deploy
 - GitHub Pages serves the repo root to the custom domain in `CNAME`
   (unistyle.io). No workflow builds the site - merging a PR into main publishes it.
+- GitHub Pages gives us NO file-based redirect or header control. There is no
+  `_redirects`, `_headers`, `wrangler.toml` or `netlify.toml` support here, and the
+  root-hygiene check in `.github/workflows/ci.yml` would reject those filenames
+  anyway. Do not add one expecting it to work.
+- **http -> https is a dashboard toggle, not a file.** Settings -> Pages ->
+  "Enforce HTTPS". If plain `http://unistyle.io/` ever answers 200 without a 301,
+  that checkbox is off (or the certificate has not been issued yet) - fix it there.
+- GitHub Pages serves BOTH `/privacy` and `/privacy.html` with a 200 and cannot
+  301 one to the other. The canonical URL is the extensionless `/privacy`:
+  `privacy.html` carries `<link rel="canonical" href="https://unistyle.io/privacy">`,
+  `sitemap.xml` lists only the extensionless form, and internal links must use
+  `privacy`, never `privacy.html`. Do NOT `Disallow: /privacy.html` in robots.txt -
+  blocking the crawl also hides the canonical tag and makes the duplicate worse.
 
 ## Branching (main is protected - PR only)
 
