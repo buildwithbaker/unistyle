@@ -1,0 +1,6 @@
+# GitHub Pages (Jekyll) build settings. Only purpose: keep repo docs off the
+# public site (PA-29). Every other file is still copied through unchanged -
+# no page here has front matter, so Jekyll does not render or rewrite them.
+exclude:
+  - CLAUDE.md
+  - README.md
