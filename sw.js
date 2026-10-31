@@ -2,7 +2,7 @@
 // Strategy: network-first for index.html (updates reach users immediately);
 //           cache-first for everything else (icons, manifest - rarely change).
 
-const CACHE_NAME = 'unistyle-v12';
+const CACHE_NAME = 'unistyle-v13';
 
 const ASSETS = [
   './',
@@ -12,6 +12,7 @@ const ASSETS = [
   './manifest.json',
   './assets/icons/icon.svg',
   './privacy.html',
+  './privacy',
   './favicon.ico',
   './assets/icons/favicon-16.png',
   './assets/icons/favicon-32.png',
@@ -44,19 +45,26 @@ self.addEventListener('activate', event => {
   self.clients.claim();
 });
 
-// On fetch: network-first for HTML (ensures updates reach installed PWA users);
+// On fetch: network-first for HTML and navigations (ensures updates reach installed PWA users);
 //           cache-first for all other assets.
 self.addEventListener('fetch', event => {
+  // Only GET is cacheable; let everything else pass through untouched.
+  if (event.request.method !== 'GET') return;
+
   const url = new URL(event.request.url);
-  const isHTML = url.pathname.endsWith('.html') || url.pathname === '/' || url.pathname === '';
+  // Navigations are pages too: GitHub Pages serves /privacy with no .html extension.
+  const isHTML = event.request.mode === 'navigate' ||
+    url.pathname.endsWith('.html') || url.pathname === '/' || url.pathname === '';
 
   if (isHTML) {
     // Network-first: try live version, fall back to cache if offline
     event.respondWith(
       fetch(event.request)
         .then(response => {
-          const clone = response.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
+          if (response.ok) {
+            const clone = response.clone();
+            caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
+          }
           return response;
         })
         .catch(() => caches.match(event.request))
