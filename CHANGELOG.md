@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased - 2026-10-31
+- **Fixed: installed PWA users could be stuck on a stale privacy page.** Since the canonical privacy URL became the extensionless `/privacy`, `sw.js` no longer recognised it as HTML and served the first cached copy cache-first forever. The service worker now treats every navigation request as a page (network-first, cache fallback offline), only handles GET requests, only caches OK responses on the network-first path, and precaches `./privacy` alongside `./privacy.html`.
+- Bumped service-worker cache to `unistyle-v13` so existing installs pick up the new worker and drop the old cache. Web-app only; no extension change.
+
 ## 1.9.0 - 2026-06-30
 - **Format Sentences now flattens case to true sentence case.** Previously it only *added* a capital at each sentence start, so ALL-CAPS or shouty input stayed capped. It now lowercases the body first, then capitalizes each sentence's first letter. Rules: the pronoun "I" (and I'm/I'll/I've/I'd) stays capital; ALL-CAPS words (NASA, API) are preserved as acronyms; ordinary proper nouns flatten to lowercase; URLs, emails, domains, @handles, and file extensions are still protected. Note: a sentence typed entirely in caps is treated as all-acronyms and is left as-is by design.
 - Bumped service-worker cache to `unistyle-v9` so the engine fix reaches installed PWA users (engine.js is served cache-first and only refreshes on a cache-name change).
